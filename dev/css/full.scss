@@ -1,0 +1,123 @@
+body {
+  padding-top: 5px;
+  background: #f3f8fb;
+}
+
+.partners_wrap {
+  padding: 30px 0 30px 0;
+  background: #fff;
+}
+
+.header {
+  position: static;
+}
+
+.event_wrap {
+  padding: 60px 50px 370px 50px;
+  margin: 60px 0 167px 0;
+  background: #fff;
+      >.event_img {
+        width: 20.69491525423729%;
+        float: left;
+          >img {
+            max-width: 100%;
+            height: auto;
+          }
+      }
+  >.event_info {
+    float: right;
+    width: 79.30508474576271%;
+      >h2 {
+        margin: 0 0 30px 0;
+        font-size: 33px;
+        color: #666;
+        font-weight: normal;
+      }
+    >.info {
+      width: 100%;
+      tr {
+        td:first-child {
+          width: 15%;
+          color: #ccc;
+        }
+        td {
+          padding-bottom: 15px;
+          font: 16px "Neue-Light",sans-serif;
+          color: #666;
+            >img {
+              vertical-align: middle;
+              margin-right: 20px;
+            }
+        }
+        >.price {
+          color: #000;
+          font-family: "Neue-Medium",sans-serif;
+          font-weight: bold;
+        }
+        >.mail, .tel {
+          color: #4a616c;
+          font-size: 21px;
+        }
+        >.mail {
+          width: 30%;
+        }
+      }
+      tr:last-child {
+        td:last-child {
+          text-align: right;
+            >.btn {
+              border-radius: 5px;
+              color: #fff;
+              background: #00a5f3;
+              border: none;
+              padding: 4px 30px 6px 30px;
+            }
+        }
+      }
+    }
+   >.program {
+     color: #00a6d9;
+     font: 26px "Myriad Pro", sans-serif;
+     margin: 50px 0 30px 0;
+   }
+    >.program_list {
+      padding: 0;
+      margin: 0;
+      >li {
+        margin-top: 20px;
+        font-family: "Neue-Light",sans-serif;
+        font-size: 26px;
+        color: #666;
+        list-style: none;
+      }
+    }
+    >.more {
+      cursor: pointer;
+      color: #849ea8;
+      font-size: 26px;
+      font-family: "Mydriad Pro",sans-serif;
+      padding-bottom: 8px;
+      border-bottom: 2px dashed #849ea8;
+      display: table;
+      margin: 80px 0 30px 0;
+        &:hover {
+          border-bottom-color: transparent;
+        }
+    }
+    >.more_info {
+      display: none;
+      width: 100%;
+      tr {
+        td:first-child {
+          width: 30%;
+          color: #ccc;
+        }
+        td {
+          padding-bottom: 15px;
+          font: 19px "Neue-Light", sans-serif;
+          color: #666;
+        }
+      }
+    }
+  }
+}
