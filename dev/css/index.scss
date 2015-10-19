@@ -71,6 +71,10 @@ main {
                 margin-right: 10px;
               }
           }
+        >.row {
+          position: relative;
+          margin-bottom: 15px;
+        }
         >.btn {
           background: #00a6f4;
           color: #fff;
@@ -81,6 +85,7 @@ main {
           display: table;
           margin: 30px auto 0 auto;
         }
+
       }
 
       >input {
@@ -188,3 +193,4 @@ main {
     left: 20px;
   }
 }
+

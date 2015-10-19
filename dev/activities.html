@@ -3,6 +3,7 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Мероприятия</title>
+    <link rel="stylesheet" href="bower/select2/dist/css/select2.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/activities.css">
 </head>
@@ -189,78 +190,45 @@
 
                             <div class="row">
                                 <p>Статус</p>
-                                <div class="select">
-                                    <div class="select_head">
-                                        <p>Открытое мероприятие</p>
-                                        <span class="elem"></span>
-                                    </div>
-                                    <ul>
-                                        <li>Открытое мероприятие</li>
-                                        <li>Открытое мероприятие1</li>
-                                        <li>Открытое мероприятие2</li>
-                                    </ul>
-                                </div>
+                                    <select class="js-example-basic-single" style="width: 100%">
+                                        <option value="AL">Открытое мероприятие</option>
+                                        <option value="WY">Закрытое мероприятие</option>
+                                    </select>
                             </div>
 
-                            <div class="row">
+                            <div class="row clearfix">
                                 <p>Дата проведения</p>
-                                <div class="select">
-                                    <div class="select_head">
-                                        <p>Сентябрь</p>
-                                        <span class="elem"></span>
-                                    </div>
-                                    <ul>
-                                        <li>Октябрь</li>
-                                        <li>Ноябрь</li>
-                                        <li>Декабрь</li>
-                                    </ul>
-                                </div>
+                                <select class="js-example-basic-single" id="date" style="width: 70%">
+                                    <option value="AL">Сентябрь</option>
+                                    <option value="WY">Октябрь</option>
+                                </select>
+                                <select id="year">
+                                    <option selected>2015</option>
+                                    <option>2016</option>
+                                </select>
                             </div>
 
                             <div class="row">
                                 <p>Тип мероприятия</p>
-                                <div class="select">
-                                    <div class="select_head">
-                                        <p>Мастер-класс</p>
-                                        <span class="elem"></span>
-                                    </div>
-                                    <ul>
-                                        <li>Мастер-класс1</li>
-                                        <li>Мастер-класс2</li>
-                                        <li>Мастер-класс3</li>
-                                    </ul>
-                                </div>
+                                <select class="js-example-basic-single" style="width: 100%">
+                                    <option value="AL">Мастер-класс</option>
+                                    <option value="WY">Кастер-мласс</option>
+                                </select>
                             </div>
 
                             <div class="row">
                                 <p>Для кого</p>
-                                <div class="select">
-                                    <div class="select_head">
-                                        <p>Юрист</p>
-                                        <span class="elem"></span>
-                                    </div>
-                                    <ul>
-                                        <li>Каратист</li>
-                                        <li>Баянист</li>
-                                        <li>Геодезист</li>
-                                    </ul>
-                                </div>
-                            </div>
+                                <select class="js-example-basic-single" style="width: 100%">
+                                    <option value="AL">Юрист</option>
+                                    <option value="WY">Каратист</option>
+                                </select>                         </div>
 
                             <div class="row">
                                 <p>Тематика мероприятия</p>
-                                <div class="select">
-                                    <div class="select_head">
-                                        <p>Тематика1</p>
-                                        <span class="elem"></span>
-                                    </div>
-                                    <ul>
-                                        <li>Тематика1</li>
-                                        <li>Тематика2</li>
-                                        <li>Тематика3</li>
-                                    </ul>
-                                </div>
-                            </div>
+                                <select class="js-example-basic-single" style="width: 100%">
+                                    <option value="AL">Тематика 1</option>
+                                    <option value="WY">Тематика 2</option>
+                                </select>                        </div>
 
 
                             <button type="submit" name="submit" class="btn">Найти</button>
@@ -284,6 +252,7 @@
         //= templates/footer.html
     </main>
     <script src="bower/jquery/dist/jquery.min.js"></script>
+    <script src="bower/select2/dist/js/select2.full.min.js"></script>
     <script src="js/index.js"></script>
 </body>
 </html>

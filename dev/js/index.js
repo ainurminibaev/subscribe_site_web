@@ -25,33 +25,6 @@ $(function(){
     });
     elem.height(max);
 
-
-
-
-    ///select
-    var select = $('.select'),
-        s_head = $('.select_head');
-
-    //добавление title для каждого пункта селекта и самого селекта
-    select.each(function(){
-     var title = $(this).find(s_head).children('p').text();
-        $(this).find(s_head).children('p').attr('title',title);
-        $(this).find('ul').children('li').each(function(){
-            $(this).attr('title',$(this).text());
-        });
-    });
-
-//собт-о сам селект
-    s_head.click(function(){
-        $(this).parent(select).addClass('active').find('ul').show();
-        $(this).closest(select).find('ul').children('li').click(function(){
-            var txt =  $(this).text();
-            $(this).closest(select).removeClass('active').find('ul').hide();
-            $(this).closest(select).find(s_head).find('p').text(txt);
-        });
-
-    });
-
     ///блок дополнительная информация
     $('.more').clickToggle(function(){
         $('.more_info').show(0);
@@ -66,7 +39,7 @@ $(function(){
         e.preventDefault();
         var text = $(this).text();
         $(this).parent('div').fadeOut();
-        job.slideDown(300, function(){
+        job.slideDown(1150, function(){
             job.children('p').html('<a href="#" id="back"><img src="img/back.png" alt="back"></a>' + text);
             job.find('#back').click(function(e){
                 e.preventDefault();
@@ -74,8 +47,23 @@ $(function(){
                 buttons.fadeIn(300);
             });
         });
+    });
 
 
+    //selects
+    $(".js-example-basic-single").select2({
+    });
+
+    $('#VUZ').select2({
+        placeholder: "ВУЗ"
+    });
+
+    $('#start').select2({
+        placeholder: "Год поступления"
+    });
+
+    $('#over').select2({
+        placeholder: "Год окончания"
     });
 
 });

@@ -16,6 +16,7 @@ body {
   margin-bottom: 260px;
   margin-top: 90px;
     >h2 {
+      margin-left: 40px;
       color: #666;
       font-size: 26px;
       font-weight: normal;
@@ -105,6 +106,7 @@ body {
                 color: #666666;
               }
               >.row {
+                position: relative;
                 margin-bottom: 30px;
                 >p {
                   font-family: "Neue-Light",sans-serif;
@@ -125,28 +127,9 @@ body {
                       box-shadow:  0 0 15px rgba(30,195,221,.7);
                     }
                 }
-                >.select {
-                  padding-top: 4px;
-                  border-color: #d4d4d4;
-                  height: 30px;
-                    .elem {
-                      top: 9px;
-                      border-top-color: #d4d4d4;
-                    }
-                  >.select_head {
-                    >p {
-                      color: #666;
-                      font-size: 13px;
-                    }
-                  }
-                  >ul {
-                    top: 8px;
-                      >li {
-                        height: 30px;
-                        font-size: 13px;
-                        color: #666;
-                      }
-                  }
+                >#date {
+                  width: 70%;
+                  float: left;
                 }
               }
               >.row#price {
@@ -171,4 +154,52 @@ body {
             }
         }
       }
+}
+
+.select2-container .select2-selection--single {
+height: 25px;
+  border-color: #cdcdcd;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  font: 13px "Neue-Light",sans-serif;
+  padding-top: 2px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  top: 0;
+  border-color: #cdcdcd transparent transparent transparent;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+  border-color: #cdcdcd transparent transparent transparent;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__placeholder {
+  color: #666;
+}
+
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+  border-color: transparent transparent #cdcdcd transparent;
+}
+
+.select2-results {
+  font: 13px "Neue-Light",sans-serif;
+}
+
+
+#year {
+  display: inline-block;
+  cursor: pointer;
+  width: 15%;
+  margin-left: 5%;
+  height: 25px;
+  border: none;
+  font:13px "Neue-Light",sans-serif;
+  color: #ccc;
+  text-align: center;
+  -webkit-appearance: none;
+    &:focus {
+      outline: none;
+    }
 }
