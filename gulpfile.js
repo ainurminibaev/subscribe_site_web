@@ -98,3 +98,7 @@ gulp.task('clean', function () {
 gulp.task('run', ['clean'], function(){
     gulp.start(['css', 'html','img','js','fonts','server', 'watch']);
 });
+
+gulp.task('build', ['clean'], function(){
+    gulp.start(['css', 'html','img','js','fonts']);
+});
