@@ -1,6 +1,12 @@
 @import "../../build/bower/normalize.css/normalize.css";
 @import "fonts";
 
+a {
+  &:focus {
+    outline: none;
+  }
+}
+
 body {
   font: 16px "Neue-Regular",sans-serif;
   line-height: 1em;
