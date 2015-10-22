@@ -1,6 +1,12 @@
 @import "../../build/bower/normalize.css/normalize.css";
 @import "fonts";
 
+a {
+  &:focus {
+    outline: none;
+  }
+}
+
 body {
   font: 16px "Neue-Regular",sans-serif;
   line-height: 1em;
@@ -56,32 +62,46 @@ div {
       height: 100%;
       width: 100%;
       >.info {
-        display: table-cell;
-        vertical-align: middle;
-        text-align: left;
-        >h2 {
-          line-height: 1em;
-          color: #4a616c;
-          font-size: 40px;
-          margin-bottom: 50px;
-          font-weight: normal;
-        }
-        >p {
-          font-family: "Neue-Light",sans-serif;
-          color: #4a616c;
-          font-size: 30px;
-          line-height: 1.2em;
-          >a {
-            font-family: "Neue-Regular",sans-serif;
-            text-decoration: none;
-            color: #00a7f4;
-            padding-bottom: 0;
-            border-bottom: 2px dashed #00a7f4;
-            &:hover {
-              border-bottom-color: transparent;
+height: 100%;
+        >div {
+          position: relative;
+          height: 50%;
+          >h2 {
+            position: absolute;
+            bottom: 0;
+            margin-top: 0;
+            line-height: 1em;
+            color: #4a616c;
+            font-size: 40px;
+            // margin-bottom: 50px;
+            font-weight: normal;
+            vertical-align: bottom;
+          }
+          >p {
+            border-top-right-radius: 3px;
+            height: 100%;
+            padding-top:30px;
+            margin: 0;
+            border-top: 1px solid #d8e2e6;
+            border-right: 1px solid #d8e2e6;
+            font-family: "Neue-Light",sans-serif;
+            color: #4a616c;
+
+            font-size: 30px;
+            line-height: 1.2em;
+            >a {
+              font-family: "Neue-Regular",sans-serif;
+              text-decoration: none;
+              color: #00a7f4;
+              padding-bottom: 0;
+              border-bottom: 2px dashed #00a7f4;
+              &:hover {
+                border-bottom-color: transparent;
+              }
             }
           }
         }
+
       }
     }
   }
