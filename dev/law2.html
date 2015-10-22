@@ -15,7 +15,7 @@
         <div class="header_info">
 
             <div class="info">
-                <h2>Поздравляем, Ильнур!</h2>
+                <h2>Поздравляем<span id="userName"></span>!</h2>
                 <p>Теперь вы подписаны на рассылки и будете<br>
                     в курсе интересующих вас новостей!</p>
             </div>
@@ -28,7 +28,7 @@
 
 <main>
     <div class="wrapper">
-        <form id="src">
+        <form id="subscribeForm">
            <p class="about"> Пожалуйста, расскажите больше о себе, чтобы наша<br>
             рассылка стала более полезной для вас:</p>
             <span class="job">Каким родом деятельности вы занимаетесь?</span>
@@ -39,7 +39,7 @@
             <div class="job_wrap">
                 <p><a href="#" id="back"><img src="img/back.png" alt="back"></a>Учусь</p>
                 <div class="row">
-                    <select class="js-example-basic-single" style="width: 100%">
+                    <select class="js-example-basic-single" style="width: 100%" id="highSchool">
                         <option value="AL">Казанский (Приволжский) Федеральный Университет</option>
 
                         <option value="WY">КХТИ</option>
@@ -47,13 +47,13 @@
                 </div>
 
 
-                <div class="row">
-                    <select class="js-example-basic-single" id="VUZ" style="width: 100%">
-                        <option></option>
-                        <option value="AL">ВУЗ1</option>
-                        <option value="WY">ВУЗ2</option>
-                    </select>
-                </div>
+                <!--<div class="row">-->
+                    <!--<select class="js-example-basic-single" id="VUZ" style="width: 100%">-->
+                        <!--<option></option>-->
+                        <!--<option value="AL">ВУЗ1</option>-->
+                        <!--<option value="WY">ВУЗ2</option>-->
+                    <!--</select>-->
+                <!--</div>-->
 
                 <div class="row">
                     <select class="js-example-basic-single" id="start" style="width: 100%">
@@ -78,8 +78,16 @@
     </div>
 </main>
 //= templates/footer.html
+<script id="template_highSchool" type="text/html">
+    {{~it:value:key}}
+    <option value="{{=value}}">{{=value}}</option>
+    {{~}}
+</script>
 <script src="bower/jquery/dist/jquery.min.js"></script>
 <script src="bower/select2/dist/js/select2.full.min.js"></script>
-<script src="js/index.js"></script>
+<script src="js/data_subscribs.js"></script>
+<script src="js/data_highSchool.js"></script>
+<script src="js/doT.js"></script>
+<script src="js/law2.js"></script>
 </body>
 </html>

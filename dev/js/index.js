@@ -12,9 +12,27 @@
     };
 }(jQuery));
 
-
-
 $(function(){
+    var form, i, templ,formData;
+    templ = doT.template($('#template_delivery_item').text());
+    formData = {
+        items:[],
+        email:true,nameFirst:true,nameLast:true,nameMid:true
+    };
+    for(i=0; i < _data['delivery_items'].length;i++){
+        formData.items[i] = templ(_data['delivery_items'][i]);
+    }
+    templ = doT.template($('#template_form').text());
+    form = $('main .wrapper');
+    form.prepend(templ(formData));
+    //form = $('#subscribeForm', form);
+    //form.on('submit', function(e){
+    //    e.preventDefault();
+        //console.log(form);
+    //});
+
+
+
     // одинаковая высота для блоков с рассылкой
     var elem = $('.theme'),
         max = 0;
@@ -24,46 +42,4 @@ $(function(){
         }
     });
     elem.height(max);
-
-    ///блок дополнительная информация
-    $('.more').clickToggle(function(){
-        $('.more_info').show(0);
-    }, function(){
-        $('.more_info').hide(0)
-    });
-
-    //учусь/работаю
-    var job = $('.job_wrap'),
-        buttons = $('.buttons');
-    buttons.find('button').click(function(e){
-        e.preventDefault();
-        var text = $(this).text();
-        $(this).parent('div').fadeOut();
-        job.slideDown(1150, function(){
-            job.children('p').html('<a href="#" id="back"><img src="img/back.png" alt="back"></a>' + text);
-            job.find('#back').click(function(e){
-                e.preventDefault();
-                job.slideUp(300);
-                buttons.fadeIn(300);
-            });
-        });
-    });
-
-
-    //selects
-    $(".js-example-basic-single").select2({
-    });
-
-    $('#VUZ').select2({
-        placeholder: "ВУЗ"
-    });
-
-    $('#start').select2({
-        placeholder: "Год поступления"
-    });
-
-    $('#over').select2({
-        placeholder: "Год окончания"
-    });
-
 });

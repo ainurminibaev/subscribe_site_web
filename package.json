@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://jetbrainslab.it.kpfu.ru/ainurminibaev/subscribe_site_web.git"
+    "url": "https://github.com/ainurminibaev/subscribe_site_web.git"
   },
   "author": "",
   "license": "ISC",
@@ -29,5 +29,8 @@
     "gulp-watch": "^4.3.5",
     "imagemin-pngquant": "^4.1.2",
     "sass": "^0.5.0"
+  },
+  "dependencies": {
+    "imagemin": "^3.2.1"
   }
 }
