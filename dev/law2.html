@@ -42,38 +42,58 @@
             </div>
             <div class="job_wrap">
                 <p><a href="#" id="back"><img src="img/back.png" alt="back"></a>Учусь</p>
-                <div class="row">
-                    <select class="js-example-basic-single" style="width: 100%">
-                        <option value="AL">Казанский (Приволжский) Федеральный Университет</option>
 
-                        <option value="WY">КХТИ</option>
-                    </select>
+
+                <div id="study">
+                    <div class="row">
+                        <select class="js-example-basic-single" style="width: 100%" id="VUZ">
+                            <option value="AL">Казанский (Приволжский) Федеральный Университет</option>
+
+                            <option value="WY">КХТИ</option>
+                        </select>
+                    </div>
+
+
+
+                    <div class="row">
+                        <select class="js-example-basic-single" id="start" style="width: 100%">
+                            <option></option>
+
+                        </select>
+                    </div>
+
+                    <div class="row">
+                        <select class="js-example-basic-single" id="over" style="width: 100%">
+                            <option></option>
+                            <option value="AL">2012</option>
+                            <option value="WY">2013</option>
+                        </select>
+                    </div>
                 </div>
 
-
-                <div class="row">
-                    <select class="js-example-basic-single" id="VUZ" style="width: 100%">
-                        <option></option>
-                        <option value="AL">ВУЗ1</option>
-                        <option value="WY">ВУЗ2</option>
-                    </select>
+                <div id="work">
+                    <div class="row">
+                        <select class="js-example-basic-single" id="city" style="width: 100%">
+                            <option></option>
+                            <option value="AL">Казань</option>
+                            <option value="WY">Москва</option>
+                        </select>
                 </div>
 
-                <div class="row">
-                    <select class="js-example-basic-single" id="start" style="width: 100%">
-                        <option></option>
-                        <option value="AL">2012</option>
-                        <option value="WY">2013</option>
-                    </select>
+                    <div class="row">
+                        <input type="text" name="job" placeholder="Профессия" class="form-control">
+                    </div>
+
+                    <div class="row">
+                        <select class="js-example-basic-single " id="xp" style="width: 100%">
+                            <option>0-5</option>
+                            <option value="AL">5-10</option>
+                            <option value="WY">10-15</option>
+                        </select>
+                    </div>
+
                 </div>
 
-                <div class="row">
-                    <select class="js-example-basic-single" id="over" style="width: 100%">
-                        <option></option>
-                        <option value="AL">2012</option>
-                        <option value="WY">2013</option>
-                    </select>
-                </div>
 
             <button class="btn">Сохранить</button>
             </div>

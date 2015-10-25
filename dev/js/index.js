@@ -35,19 +35,36 @@ $(function(){
     //учусь/работаю
     var job = $('.job_wrap'),
         buttons = $('.buttons');
+    //job.children('div').hide();
+
     buttons.find('button').click(function(e){
         e.preventDefault();
         var text = $(this).text();
         $(this).parent('div').fadeOut();
+        if(text === "Учусь"){
+
+            $('#study').addClass('active').siblings().removeClass('active');
+        }
+        else {
+            $('#work').addClass('active').siblings().removeClass('active');
+        }
         job.slideDown(1150, function(){
-            job.children('p').html('<a href="#" id="back"><img src="img/back.png" alt="back"></a>' + text);
             job.find('#back').click(function(e){
                 e.preventDefault();
                 job.slideUp(300);
                 buttons.fadeIn(300);
             });
         });
+        job.children('p').html('<a href="#" id="back"><img src="img/back.png" alt="back"></a>' + text);
+
+
     });
+
+
+    var job_html = '<div class="row"><select class="js-example-basic-single" id="city" style="width: 100%">' +
+        '<option></option> <option value="AL">Город</option>' +
+    '<option value="WY">Казань</option>' +
+    '</select></div>';
 
 
     //плавный переход на сайт
@@ -64,21 +81,80 @@ $(function(){
         });
     });
 
+    //валидация формы
+    var error;
+
+
+
+    var src = $('#src');
+
+    $('#subscribe').click(function(e){
+    e.preventDefault();
+    src.find('input').each(function(){
+      if($(this).attr('id')!='middleName' && $(this).val()==''){
+          $(this).addClass('error');
+            if($(this).attr('id')=='firstName'){
+                error = 'Пожалуйста, введите ваше имя'
+            }
+                else {
+                if($(this).attr('id')=='lastName'){
+                    error = 'Пожалуйста, введите вашу фамилию'
+                }
+                    else {
+                    error = 'Пожалуйста, введите адрес электронной почты'
+                }
+            }
+          $(this).parent('.row').append('<p> ' + error + '</p>')
+
+      }
+      else {
+          $(this).removeClass('error');
+      }
+
+
+  });
+    $('.error').eq(0).focus();
+
+
+
+
+});
+
+
+
+
 
     //selects
-    $(".js-example-basic-single").select2({
-    });
+    for(var i=1950;i<2016;i++){
+        $('#start').append('<option>' + i +  '</option>');
+
+    }
+
+    $(".js-example-basic-single").select2();
 
     $('#VUZ').select2({
-        placeholder: "ВУЗ"
+        placeholder: "ВУЗ",
+        minimumResultsForSearch: -1
     });
 
     $('#start').select2({
-        placeholder: "Год поступления"
+        placeholder: "Год поступления",
+        minimumResultsForSearch: -1
+
     });
 
     $('#over').select2({
-        placeholder: "Год окончания"
+        placeholder: "Год окончания",
+        minimumResultsForSearch: -1
     });
+
+    $('#city').select2({
+        placeholder: "Город",
+        Decorator: "DropdownSearch"
+    });
+
+    $('#xp').select2({
+        minimumResultsForSearch: -1
+    })
 
 });

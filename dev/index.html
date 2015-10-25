@@ -33,11 +33,20 @@
 <main>
     <div class="wrapper">
             <form id="src">
-                <p>Подписка на рассылку</p>
-                <input type="text" name="name" placeholder="Имя" tabindex="1" class="success">
-                <input type="text" name="lastName" placeholder="Фамилия" tabindex="2">
-                <input type="text" name="middleName" placeholder="Отчество" tabindex="3">
-                <input type="email" name="mail" placeholder="E-mail" tabindex="4">
+                    <p>Подписка на рассылку</p>
+                    <div class="row">
+                        <input type="text" name="name" placeholder="Имя" tabindex="1" class="validate" id="firstName">
+                    </div>
+                    <div class="row">
+                        <input type="text" name="lastName" placeholder="Фамилия" tabindex="2" class="validate" id="lastName">
+                    </div>
+                    <div class="row">
+                        <input type="text" name="middleName" placeholder="Отчество" tabindex="3" id="middleName">
+                    </div>
+                    <div class="row">
+                        <input type="email" name="mail" placeholder="E-mail" tabindex="4" class="validate" id="mail">
+                    </div>
+
                 <p class="interest_themes">Выберите интересующие вас темы рассылки:</p>
                 <div class="themes_wrap clearfix">
                     <div class="theme">

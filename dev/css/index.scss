@@ -16,6 +16,83 @@ main {
         font: 20px "Neue-Light",sans-serif;
         color: #849ea8;
       }
+          >.errors {
+            position: absolute;
+            right: -190px;
+            top: 50px;
+            width: 150px;
+            border: 1px solid red;
+              >p {
+                color: #849ea8;
+                margin: 0 0 5px 0;
+                font: 16px "Neue-Light", sans-serif;
+                line-height: .8em;
+              }
+          }
+          >p {
+            text-align: center;
+            font: 20px "Neue-Light",sans-serif;
+            color: #849ea8;
+          }
+          >.row {
+            position: relative;
+            width: 320px;
+            margin: 0 auto 15px auto;
+              >p {
+                font-family: "Neue-Light",sans-serif;
+                color: #849ea8;
+                margin: 0 0 5px 0;
+                top: 0;
+                position: absolute;
+                right: -190px;
+                width: 150px;
+              }
+            >input {
+              display: block;
+              height: 40px;
+              border-radius: 4px;
+              width: 100%;
+              border: 1px solid #c1d3dd;
+              color: #4a616c;
+              font: 20px Neue-Medium,sans-serif;
+              padding: 0 13px;
+              box-sizing: border-box;
+              &:focus {
+                outline: none;
+                //            border: 1px solid #1EC3DD;
+                //            box-shadow:  0 0 15px rgba(30,195,221,.7);
+              }
+            }
+            >input::-webkit-input-placeholder  {
+              font: 20px "Neue-Light",sans-serif;
+              color: #c1d3dc;
+            }
+            >input::-moz-placeholder{
+              font: 20px "Neue-Light",sans-serif;
+              color: #c1d3dc;
+
+            }
+            >input:-ms-input-placeholder{
+              font: 20px "Neue-Light",sans-serif;
+              color: #c1d3dc;
+
+            }
+            >.validate {
+              &:focus {
+                box-shadow: 0 0 15px rgba(64,199,49,.6);
+              }
+            }
+            >.error {
+              border: 1px solid #eac0c5;
+              &:focus {
+                box-shadow: 0 0 15px rgba(234,192,197,1);
+              }
+            }
+          }
+
+
+
+
       >.about {
         color: #00a7f4;
         font-size: 30px;
@@ -71,10 +148,40 @@ main {
                 margin-right: 10px;
               }
           }
-        >.row {
-          position: relative;
-          margin-bottom: 15px;
+        >div {
+          display: none;
+          .row {
+             position: relative;
+             margin-bottom: 15px;
+              >input {
+                height: 40px;
+                width: 100%;
+                border-radius: 4px;
+                border: 1px solid #c1d3dc;
+                padding-left: 10px;
+                padding-right: 40px;
+                box-sizing: border-box;
+                color: #4a616c;
+                font:20px "Neue-Medium",sans-serif;
+              }
+            >input::-webkit-input-placeholder {
+              font-family: "Neue-Light", sans-serif;
+              color: #b4c9d2;
+            }
+            >input::-moz-placeholder {
+              font-family: "Neue-Light", sans-serif;
+              color: #b4c9d2;
+            }
+            >input:-ms-input-placeholder {
+              font-family:  "Neue-Light", sans-serif;
+              color: #b4c9d2;
+            }
+           }
         }
+        >div.active {
+          display: block;
+        }
+
         >.btn {
           background: #00a6f4;
           color: #fff;
@@ -88,26 +195,7 @@ main {
 
       }
 
-      >input {
-        display: block;
-        margin:0 auto 15px auto;
-        height: 40px;
-        border-radius: 4px;
-        width: 320px;
-        border: 1px solid #c1d3dd;
-        font: 20px "Neue-Light",sans-serif;
-        color: #c1d3dc;
-        padding: 0 13px;
-        box-sizing: border-box;
-          &:focus {
-            outline: none;
-            border: 1px solid #1EC3DD;
-            box-shadow:  0 0 15px rgba(30,195,221,.7);
-          }
-      }
-      >.success {
-        box-shadow: 0 0 15px rgba(64,199,49,.6);
-      }
+
       .interest_themes {
         margin-top: 55px;
       }
