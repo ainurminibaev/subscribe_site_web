@@ -1,4 +1,6 @@
-﻿_data.formData = {};
+﻿
+
+_data.formData = {};
 _data.subscribeTo = [];
 decodeURIComponent(location.search).replace(/^\?/,'').split('&').forEach(function(e){
     var temp;
@@ -17,12 +19,6 @@ var username = [
 ].join(' ').replace(/\s{2,}/g,' ');
 if(username.length > 2) $('#userName').text(username);
 $(function(){
-    ///блок дополнительная информация
-    //$('.more').clickToggle(function(){
-    //    $('.more_info').show(0);
-    //}, function(){
-    //    $('.more_info').hide(0)
-    //});
 
     //учусь/работаю
     var job = $('.job_wrap'),
@@ -56,8 +52,7 @@ $(function(){
         )(_data.highSchool)
     );
     ////selects
-    $(".js-example-basic-single").select2({
-    });
+    $(".js-example-basic-single").select2();
 
     $('#highSchool').select2({
         placeholder: "ВУЗ",

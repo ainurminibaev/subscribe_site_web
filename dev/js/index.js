@@ -1,16 +1,3 @@
-(function($) {
-    $.fn.clickToggle = function(func1, func2) {
-        var funcs = [func1, func2];
-        this.data('toggleclicked', 0);
-        this.click(function() {
-            var data = $(this).data();
-            var tc = data.toggleclicked;
-            $.proxy(funcs[tc], this)();
-            data.toggleclicked = (tc + 1) % 2;
-        });
-        return this;
-    };
-}(jQuery));
 
 $(function(){
     var form, i, templ,formData;
@@ -31,19 +18,7 @@ $(function(){
         //console.log(form);
     //});
 
-    //плавный переход на сайт
-    $('a[href^="#"]').on('click',function (e) {
-        e.preventDefault();
 
-        var target = this.hash;
-        var $target = $(target);
-
-        $('html, body').stop().animate({
-            'scrollTop': $target.offset().top
-        }, 900, 'swing', function () {
-            window.location.hash = target;
-        });
-    });
 
     // одинаковая высота для блоков с рассылкой
     var elem = $('.theme'),
@@ -113,22 +88,6 @@ $(function(){
             });
 
         });
-
-
-//        src.find('input').each(function(){
-//            $(this).focusout(function(){
-//                if($(this).attr('placeholder')!='Отчество'){
-//                    if($(this).val()!=''){
-//                        $(this).removeClass('error');
-//                        $(this).parent('div').children('p').remove();
-//                    }
-//                    else {
-//                        $(this).addClass('error');
-//                        $(this).parent('div').append('<p>' + error + '</p>');
-//                    }
-//                }
-//            });
-//        });
 
     });
 

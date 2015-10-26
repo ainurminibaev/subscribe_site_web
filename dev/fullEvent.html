@@ -113,7 +113,17 @@
         //= templates/footer.html
     </main>
 <script src="bower/jquery/dist/jquery.min.js"></script>
-<script src="js/index.js"></script>
+<script src="js/clickToggle.js"></script>
+<script src="js/smooth.js"></script>
+<script>
+    ///блок дополнительная информация
+    $('.more').clickToggle(function(){
+        $('.more_info').show(0);
+    }, function() {
+        $('.more_info').hide(0);
+    });
+    //});
+</script>
 
 </body>
 </html>
