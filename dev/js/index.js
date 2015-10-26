@@ -62,4 +62,74 @@ $(function(){
         $('.more_info').hide(0)
     });
 
+    var src= $('.subscr_wrap'),
+        error1, error2, error3, error = '';
+
+    ///валидация
+    $('#subscribe').click(function(e){
+        e.preventDefault();
+        src.find('input').each(function(){
+            if($(this).val()=='' && $(this).attr('placeholder')!='Отчество'){
+                $(this).addClass('error');
+                    if($(this).attr('placeholder')==='Имя'){
+                        error = error1 = 'Пожалуйста, введите ваше имя';
+                    }
+                        else {
+                        if($(this).attr('placeholder')==='Фамилия'){
+                            error =   error2 = 'Пожалуйста, введите вашу фамилию';
+                        }
+                            else {
+                            error =   error3 = 'Пожалуйста, введите адрес электронной почты';
+                        }
+                    }
+                $(this).parent('div').append('<p>' + error + '</p>');
+            }
+            else {
+                $(this).removeClass('error');
+            }
+            $('.error').eq(0).focus();
+
+            $(this).focusout(function(){
+                if($(this).attr('placeholder')!='Отчество'){
+                    if($(this).val()!=''){
+                        $(this).removeClass('error');
+                        $(this).parent('div').children('p').remove();
+                    }
+                    else {
+                        $(this).addClass('error');
+                            if($(this).attr('placeholder')=='Имя'){
+                                $(this).parent('div').append('<p>' + error1 + '</p>');
+                            }
+                                else {
+                                if($(this).attr('placeholder')=='Фамилия'){
+                                    $(this).parent('div').append('<p>' + error2 + '</p>');
+                                }
+                                    else {
+                                    $(this).parent('div').append('<p>' + error3 + '</p>');
+                                }
+                            }
+                    }
+                }
+            });
+
+        });
+
+
+//        src.find('input').each(function(){
+//            $(this).focusout(function(){
+//                if($(this).attr('placeholder')!='Отчество'){
+//                    if($(this).val()!=''){
+//                        $(this).removeClass('error');
+//                        $(this).parent('div').children('p').remove();
+//                    }
+//                    else {
+//                        $(this).addClass('error');
+//                        $(this).parent('div').append('<p>' + error + '</p>');
+//                    }
+//                }
+//            });
+//        });
+
+    });
+
 });

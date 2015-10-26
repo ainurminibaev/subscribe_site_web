@@ -87,27 +87,53 @@ main {
         }
 
       }
-
-      >input {
-        display: block;
-        margin:0 auto 15px auto;
-        height: 40px;
-        border-radius: 4px;
-        width: 320px;
-        border: 1px solid #c1d3dd;
-        font: 20px "Neue-Light",sans-serif;
-        color: #c1d3dc;
-        padding: 0 13px;
-        box-sizing: border-box;
-          &:focus {
-            outline: none;
-            border: 1px solid #1EC3DD;
-            box-shadow:  0 0 15px rgba(30,195,221,.7);
-          }
+>.subscr_wrap {
+  width: 320px;
+  margin: 0 auto;
+  >.row {
+    margin-bottom: 15px;
+    position: relative;
+      >p {
+        margin: 0;
+        top: 0;
+        right: -190px;
+        position: absolute;
+        width: 150px;
+        color: #849ea8;
+        font: 16px "Neue-Light",sans-serif;
+        line-height: .9em;
       }
-      >.success {
+    >input {
+      display: block;
+      height: 40px;
+      border-radius: 4px;
+      width: 100%;
+      border: 1px solid #c1d3dd;
+      font: 20px "Neue-Light",sans-serif;
+      color: #c1d3dc;
+      padding: 0 13px;
+      box-sizing: border-box;
+      &:focus {
+        outline: none;
+        //            border: 1px solid #1EC3DD;
+        //            box-shadow:  0 0 15px rgba(30,195,221,.7);
+      }
+    }
+    >.validate {
+      &:focus {
         box-shadow: 0 0 15px rgba(64,199,49,.6);
       }
+    }
+    >.error {
+      border: 1px solid #eac0c5;
+      &:focus {
+        box-shadow: 0 0 15px #eac0c5;
+      }
+    }
+  }
+
+
+}
       .interest_themes {
         margin-top: 55px;
       }

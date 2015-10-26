@@ -50,7 +50,7 @@ div {
   padding-top: 5px;
   box-shadow: inset 0 -5px 10px rgba(0,0,0,.1);
   background: #f4f8fa;
-  height: 100%;
+  height: 50%;
 
   > .wrapper {
     height: 100%;
@@ -78,6 +78,7 @@ height: 100%;
             vertical-align: bottom;
           }
           >p {
+            box-sizing: border-box;
             border-top-right-radius: 3px;
             height: 100%;
             padding-top:30px;
@@ -320,3 +321,4 @@ footer.footer {
 .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
   border-color: transparent transparent #c1d3dc transparent;
 }
+
