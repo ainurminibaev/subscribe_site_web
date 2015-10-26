@@ -27,18 +27,27 @@ $(function(){
     //учусь/работаю
     var job = $('.job_wrap'),
         buttons = $('.buttons');
-    buttons.find('button').click(function(e){
+    //job.children('div').hide();
+
+    buttons.find('button').click(function(e) {
         e.preventDefault();
         var text = $(this).text();
         $(this).parent('div').fadeOut();
-        job.slideDown(1150, function(){
-            job.children('p').html('<a href="#" id="back"><img src="img/back.png" alt="back"></a>' + text);
-            job.find('#back').click(function(e){
+        if (text === "Учусь") {
+
+            $('#study').addClass('active').siblings().removeClass('active');
+        }
+        else {
+            $('#work').addClass('active').siblings().removeClass('active');
+        }
+        job.slideDown(1150, function () {
+            job.find('#back').click(function (e) {
                 e.preventDefault();
                 job.slideUp(300);
                 buttons.fadeIn(300);
             });
         });
+        job.children('p').html('<a href="#" id="back"><img src="img/back.png" alt="back"></a>' + text);
     });
 
     $('#highSchool').html(
@@ -50,17 +59,34 @@ $(function(){
     $(".js-example-basic-single").select2({
     });
 
-    //$('#VUZ').select2({
-    //    placeholder: "ВУЗ"
-    //});
+    $('#highSchool').select2({
+        placeholder: "ВУЗ",
+        minimumResultsForSearch: -1
+    });
 
     $('#start').select2({
-        placeholder: "Год поступления"
+        placeholder: "Год поступления",
+        minimumResultsForSearch: -1
     });
 
     $('#over').select2({
-        placeholder: "Год окончания"
+        placeholder: "Год окончания",
+        minimumResultsForSearch: -1
     });
+
+
+
+    $('#city').select2({
+        placeholder: "Город"
+    });
+
+    $('#xp').select2({
+        minimumResultsForSearch: -1
+    });
+
+    for(var i=1950; i<=2015;i++){
+        $('#start, #over').append('<option>' + i + '</option>');
+    }
 
 
 
