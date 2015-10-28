@@ -46,7 +46,7 @@ $(function(){
         job.children('p').html('<a href="#" id="back"><img src="img/back.png" alt="back"></a>' + text);
     });
 
-    $('#highSchool').html(
+    $('.highSchool').append(
         doT.template(
             $('#template_highSchool').text()
         )(_data.highSchool)
@@ -54,9 +54,13 @@ $(function(){
     ////selects
     $(".js-example-basic-single").select2();
 
-    $('#highSchool').select2({
+    $('.highSchool').select2({
         placeholder: "ВУЗ",
         minimumResultsForSearch: -1
+    });
+
+    $('#highSchool').on('change',function(){
+       $('#over').prop('disabled',false);
     });
 
     $('#start').select2({
@@ -64,7 +68,7 @@ $(function(){
         minimumResultsForSearch: -1
     });
 
-    $('#over').select2({
+    $('.over').select2({
         placeholder: "Год окончания",
         minimumResultsForSearch: -1
     });
@@ -80,8 +84,10 @@ $(function(){
     });
 
     for(var i=1950; i<=2015;i++){
-        $('#start, #over').append('<option>' + i + '</option>');
+        $('#start, .over').append('<option>' + i + '</option>');
     }
+
+
 
 
 

@@ -55,9 +55,10 @@ $(function(){
                         }
                             else {
                             error =   error3 = 'Пожалуйста, введите адрес электронной почты';
+
                         }
                     }
-                $(this).parent('div').append('<p>' + error + '</p>');
+                $(this).parent('div').append('<div><p>' + error + '</p></div>');
             }
             else {
                 $(this).removeClass('error');
@@ -68,21 +69,32 @@ $(function(){
                 if($(this).attr('placeholder')!='Отчество'){
                     if($(this).val()!=''){
                         $(this).removeClass('error');
-                        $(this).parent('div').children('p').remove();
+                        $(this).parent('div').find('div').children('p').eq(0).remove();
                     }
                     else {
                         $(this).addClass('error');
                             if($(this).attr('placeholder')=='Имя'){
-                                $(this).parent('div').append('<p>' + error1 + '</p>');
+                                $(this).parent('div').append('<div><p>' + error1 + '</p></div>');
                             }
                                 else {
                                 if($(this).attr('placeholder')=='Фамилия'){
-                                    $(this).parent('div').append('<p>' + error2 + '</p>');
+                                    $(this).parent('div').append('<div><p>' + error2 + '</p></div>');
                                 }
                                     else {
-                                    $(this).parent('div').append('<p>' + error3 + '</p>');
+                                    $(this).parent('div').append('<div><p>' + error3 + '</p></div>');
+                                    }
                                 }
                             }
+                    }
+                if($(this).attr('placeholder')==='E-mail'){
+                    var reg = /.+@+./;
+                    if(!reg.test($(this).val())){
+                        $(this).addClass('error');
+                        $(this).parent('div').children('div').append('<p id="MailError">Введите корректный адрес электронной почты</p>');
+                    }
+                    else {
+                        $(this).removeClass('error');
+                        $(this).parent('div').children('#MailError').remove();
                     }
                 }
             });

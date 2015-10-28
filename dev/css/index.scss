@@ -123,16 +123,19 @@ main {
   >.row {
     margin-bottom: 15px;
     position: relative;
-      >p {
+    >div {
+      top: 0;
+      right: -190px;
+      position: absolute;
+      p {
         margin: 0;
-        top: 0;
-        right: -190px;
-        position: absolute;
         width: 150px;
         color: #849ea8;
         font: 16px "Neue-Light",sans-serif;
         line-height: .9em;
       }
+
+    }
     >input {
       display: block;
       height: 40px;
@@ -249,4 +252,5 @@ main {
     left: 20px;
   }
 }
+
 
