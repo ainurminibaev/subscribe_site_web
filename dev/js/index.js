@@ -43,11 +43,11 @@ $(function(){
     ///валидация
     var reg = /.+@+./;
     $('#subscribe').click(function(e){
-        e.preventDefault();
         src.find('input').each(function(){
             if($(this).val()=='' && $(this).attr('placeholder')!='Отчество'){
                 $(this).prev('div').find('p').remove();
                 $(this).addClass('error');
+                e.preventDefault();
                     if($(this).attr('placeholder')==='Имя'){
                         error = error1 = 'Пожалуйста, введите ваше имя';
                     }
@@ -66,6 +66,7 @@ $(function(){
                 if($(this).attr('placeholder')==='E-mail'){
                     if(!reg.test($(this).val())){
                         $(this).addClass('error');
+                        e.preventDefault();
                     }
                     else {
                         $(this).removeClass('error');

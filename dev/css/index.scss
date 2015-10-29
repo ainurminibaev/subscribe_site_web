@@ -8,7 +8,7 @@ html, body {
 
 
 main {
-  padding: 60px 0 30px 0;
+  padding: 10px 0 30px 0;
   >.wrapper {
     > #subscribeForm {
       >p {
@@ -168,11 +168,11 @@ main {
 
 }
       .interest_themes {
-        margin-top: 55px;
+        margin-top: 15px;
       }
       >.themes_wrap {
         >.theme {
-          margin-bottom: 50px;
+          margin-bottom: 20px;
           width: 33.33333333333333%;
           float: left;
          // padding-right: 11.73708920187793%;
@@ -220,7 +220,7 @@ main {
         }
       }
       >#subscribe {
-        margin: 90px auto 100px auto;
+        margin: 0 auto 100px auto;
         display: block;
         padding: 8px 50px 12px 50px;
         border: none;
