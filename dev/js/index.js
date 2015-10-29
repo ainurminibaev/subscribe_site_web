@@ -41,10 +41,12 @@ $(function(){
         error1, error2, error3, error = '';
 
     ///валидация
+    var reg = /.+@+./;
     $('#subscribe').click(function(e){
         e.preventDefault();
         src.find('input').each(function(){
             if($(this).val()=='' && $(this).attr('placeholder')!='Отчество'){
+                $(this).prev('div').find('p').remove();
                 $(this).addClass('error');
                     if($(this).attr('placeholder')==='Имя'){
                         error = error1 = 'Пожалуйста, введите ваше имя';
@@ -55,13 +57,22 @@ $(function(){
                         }
                             else {
                             error =   error3 = 'Пожалуйста, введите адрес электронной почты';
-
                         }
                     }
-                $(this).parent('div').append('<div><p>' + error + '</p></div>');
+                $(this).parent('div').children('div').append('<p>' + error + '</p>');
             }
             else {
                 $(this).removeClass('error');
+                if($(this).attr('placeholder')==='E-mail'){
+                    if(!reg.test($(this).val())){
+                        $(this).addClass('error');
+                    }
+                    else {
+                        $(this).removeClass('error');
+                    }
+                }
+
+
             }
             $('.error').eq(0).focus();
 
@@ -69,32 +80,34 @@ $(function(){
                 if($(this).attr('placeholder')!='Отчество'){
                     if($(this).val()!=''){
                         $(this).removeClass('error');
-                        $(this).parent('div').find('div').children('p').eq(0).remove();
+                        $(this).prev('div').find('p').remove();
                     }
                     else {
                         $(this).addClass('error');
                             if($(this).attr('placeholder')=='Имя'){
-                                $(this).parent('div').append('<div><p>' + error1 + '</p></div>');
+                                $(this).prev('div').find('p').remove();
+                                $(this).prev('div').append('<p>' + error1 + '</p>');
                             }
                                 else {
                                 if($(this).attr('placeholder')=='Фамилия'){
-                                    $(this).parent('div').append('<div><p>' + error2 + '</p></div>');
+                                    $(this).prev('div').find('p').remove();
+                                    $(this).prev('div').append('<p>' + error2 + '</p>');
                                 }
                                     else {
-                                    $(this).parent('div').append('<div><p>' + error3 + '</p></div>');
+                                    $(this).prev('div').find('p').remove();
+                                    $(this).prev('div').append('<p>' + error3 + '</p>');
                                     }
                                 }
                             }
                     }
                 if($(this).attr('placeholder')==='E-mail'){
-                    var reg = /.+@+./;
                     if(!reg.test($(this).val())){
                         $(this).addClass('error');
                         $(this).parent('div').children('div').append('<p id="MailError">Введите корректный адрес электронной почты</p>');
                     }
                     else {
                         $(this).removeClass('error');
-                        $(this).parent('div').children('#MailError').remove();
+                        $(this).parent('div').children('div').children('#MailError').remove();
                     }
                 }
             });

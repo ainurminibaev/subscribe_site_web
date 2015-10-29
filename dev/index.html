@@ -57,9 +57,11 @@
             <p>Подписка на рассылку</p>
             <div class="subscr_wrap">
                 <div class="row">
+                    <div class="for_errors"></div>
                     {{?it.nameFirst}}<input type="text" name="field_name_first" placeholder="Имя" tabindex="1" class="validate">{{?}}
                 </div>
                 <div class="row">
+                    <div class="for_errors"></div>
                     {{?it.nameLast}}<input type="text" name="field_name_last" placeholder="Фамилия" tabindex="2" class="validate">{{?}}
 
                 </div>
@@ -70,6 +72,7 @@
                 </div>
 
                 <div class="row">
+                    <div class="for_errors"></div>
                     {{?it.email}}<input type="email" name="field_email" placeholder="E-mail" tabindex="4" class="validate">{{?}}
 
                 </div>
