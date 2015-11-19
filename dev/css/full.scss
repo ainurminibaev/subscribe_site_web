@@ -14,11 +14,18 @@ body {
 
 .go-btn {
   border-radius: 5px;
-  color: #fff;
   background: #00a5f3;
   border: none;
   padding: 4px 30px 6px 30px;
+  cursor: pointer;
+  text-decoration: none;
+    >a {
+      text-decoration: none;
+      color: #fff;
+
+    }
 }
+
 
 .event_wrap {
   padding: 60px 50px 370px 50px;

@@ -131,4 +131,23 @@ $(function(){
     attr.each(function(){
         $(this).attr('title',$(this).text());
     });
+
+
+    function adaptiveClose(){
+        $('#adaptive_body, #close_adaptive').click(function(){
+            $('.adaptive_menu').slideUp(400, function(){
+                $('#adaptive_body').hide();
+            });
+        });
+    }
+
+    //adaptive menu
+
+    $('.logo-adaptive').click(function(e){
+        e.preventDefault();
+        $('#adaptive_body').show(0, function(){
+            $('.adaptive_menu').slideDown(400);
+            adaptiveClose();
+        });
+    });
 });
