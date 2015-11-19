@@ -21,14 +21,24 @@ $(function(){
 
 
     // одинаковая высота для блоков с рассылкой
-    var elem = $('.theme'),
-        max = 0;
-    elem.each(function(){
-        if($(this).height() > max){
-            max = $(this).height();
+    function forResie(){
+        if($(window).width()> 650){
+            var elem = $('.theme'),
+                max = 0;
+            elem.each(function(){
+                if($(this).height() > max){
+                    max = $(this).height();
+                }
+            });
+            elem.height(max);
         }
+    }
+
+    forResie();
+    $(window).resize(function(){
+        forResie();
     });
-    elem.height(max);
+
 
     ///блок дополнительная информация
     $('.more').clickToggle(function(){
@@ -116,5 +126,9 @@ $(function(){
         });
 
     });
-
+///добавление тайтлов
+    var attr = $('.theme').find('.theme_info').children('p');
+    attr.each(function(){
+        $(this).attr('title',$(this).text());
+    });
 });

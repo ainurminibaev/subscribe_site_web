@@ -18,7 +18,7 @@ div {
 
 .wrapper {
   max-width: 1278px;
-  min-width: 1000px;
+  min-width: 300px;
   margin: 0 auto;
 }
 
@@ -270,6 +270,7 @@ footer.footer {
   >menu {
     margin-top: 20px;
     float: right;
+    padding: 0;
     >li {
       float: left;
       list-style: none;
@@ -322,3 +323,86 @@ footer.footer {
   border-color: transparent transparent #c1d3dc transparent;
 }
 
+@media only screen and (max-width: 1300px) {
+  .wrapper {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  header.header {
+    left: 10px;
+    right: 10px;
+  }
+  footer.footer>.wrapper:before {
+    left: 20px;
+  }
+  footer.footer>.wrapper:after {
+    right: 20px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .header>menu>li>a  {
+    font-size: 18px;
+  }
+  .header>menu {
+    margin-top: 25px;
+  }
+
+}
+
+@media  only screen and (max-width: 709px) {
+  .header>menu {
+    display: none;
+  }
+  .header .logo {
+    float: right;
+    background-position: right center;
+    padding-left: 0;
+    padding-right: 100px;
+  }
+  .header .logo>h1 {
+    margin-top: 13px;
+  }
+//доделать хедер
+
+
+
+  header.header {
+    position: static;
+    left: 0;
+    right: 0;
+  }
+
+  #info>.wrapper>.header_info {
+    display: block;
+    padding-top: 50px;
+    height: auto;
+    width: auto;
+  }
+
+  #info>.wrapper>.header_info>.info {
+    height: auto;
+  }
+
+  #info>.wrapper>.header_info>.info>div {
+    position: static;
+    height: auto;
+  }
+
+  #info>.wrapper>.header_info>.info>div>h2 {
+    position: static;
+  }
+
+  #info {
+    height: auto;
+    padding-bottom: 60px;
+  }
+
+}
+
+@media only screen and (max-width: 650px) {
+
+  footer.footer {
+    display: none;
+  }
+}

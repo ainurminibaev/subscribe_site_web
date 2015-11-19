@@ -103,6 +103,7 @@
                         <td>Оплачивает организатор</td>
                     </tr>
                 </table>
+                <button class="btn go-btn hide_go">Хочу пойти</button>
 
             </div>
         </div>
@@ -122,11 +123,14 @@
 <script src="js/smooth.js"></script>
 <script>
     ///блок дополнительная информация
-    $('.more').clickToggle(function () {
-        $('.more_info').show(0);
-    }, function () {
-        $('.more_info').hide(0);
-    });
+    if($(window).width() >= 887){
+        $('.more').clickToggle(function () {
+            $('.more_info').show(0);
+        }, function () {
+            $('.more_info').hide(0);
+        });
+    }
+
     //});
 </script>
 <script src="js/data_quotes.js"></script>

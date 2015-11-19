@@ -172,6 +172,7 @@ main {
       }
       >.themes_wrap {
         >.theme {
+          overflow: hidden;
           margin-bottom: 20px;
           width: 33.33333333333333%;
           float: left;
@@ -254,3 +255,97 @@ main {
 }
 
 
+@media only screen and (max-width: 1180px) {
+  main > .wrapper > #subscribeForm > .themes_wrap > .theme > .theme_header > label > span {
+    font-size: 17px;
+  }
+}
+
+
+@media  only screen and (max-width: 900px) {
+  #info>.wrapper>.header_info>.info>div>h2 {
+    font-size: 35px;
+  }
+
+  #info>.wrapper>.header_info>.info>div>p {
+    font-size: 25px;
+  }
+
+  main>.wrapper>#subscribeForm>.themes_wrap>.theme {
+    width: 50%;
+  }
+}
+
+@media  only screen and (max-width: 773px) {
+  #info>.wrapper>.header_info>.info>div>h2 {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 709px) {
+
+  #info>.wrapper>.header_info>.info>div>p {
+    border-right: none;
+  }
+
+  #info>.wrapper>.header_info>.info>div>p> br {
+    display: none;
+  }
+
+}
+
+@media only screen and (max-width: 650px) {
+
+
+  main>.wrapper>#subscribeForm>.themes_wrap {
+    width: 320px;
+    margin: 0 auto;
+  }
+  main>.wrapper>#subscribeForm>.themes_wrap>.theme{
+    width: 100%;
+  }
+
+  main>.wrapper>#subscribeForm>.themes_wrap>.theme>.theme_info {
+    display: none;
+  }
+  main>.wrapper>#subscribeForm .interest_themes {
+    display: none;
+  }
+
+  #info>.wrapper>.header_info>.info>div>.law2_text {
+    padding-top: 0;
+    border-top: none;
+  }
+  main>.wrapper>#subscribeForm>.about {
+    font-size: 22px;
+  }
+
+}
+
+
+@media only screen and (max-width: 460px) {
+  main>.wrapper>#subscribeForm>.job_wrap {
+    width: 100%;
+  }
+  main>.wrapper>#subscribeForm>.about {
+    text-align: left;
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  #info>.wrapper>.header_info>.info>div>h2 {
+    font-size: 22px;
+  }
+  #info>.wrapper>.header_info>.info>div>p {
+    font-size: 18px;
+  }
+  #info>.wrapper>.header_info>.info>div>p>a {
+    border-bottom-width: 1px;
+  }
+  main>.wrapper>#subscribeForm>.subscr_wrap {
+    width: 100%;
+  }
+  main>.wrapper>#subscribeForm>.themes_wrap {
+    width: 100%;
+  }
+}

@@ -271,3 +271,112 @@ height: 25px;
 
 
 }
+
+.blocked_hide {
+  display: none;
+}
+
+@media only screen and (max-width: 1130px) {
+  .activities_wrap>.activities>.activities_block>.event>.event_info>.event_information {
+    padding-left: 20px;
+  }
+}
+
+@media only screen and (max-width: 903px) {
+  .activities_wrap>.activities>.filter>form>p {
+    font-size: 18px;
+    text-align: center;
+  }
+  .activities_wrap>.activities>.activities_block>.event>.name {
+    font-size: 23px;
+  }
+  .activities_wrap>.activities>.activities_block>.event>.event_info>.event_information>table tr td {
+    padding-left: 10px;
+    box-sizing: border-box;
+  }
+}
+
+@media only screen and (max-width: 710px) {
+  .activities_wrap>.activities>.activities_block>.event>.name {
+    font-size: 20px;
+  }
+  .activities_wrap>.activities>.filter {
+    width: 100%;
+    float: none;
+    margin-bottom: 40px;
+    box-shadow:  0 1px 5px rgba(0,0,0,.1);
+  }
+  .activities_wrap>.activities>.activities_block {
+    float: none;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .activities_wrap>.activities>.activities_block>.event>.event_info>.event_img {
+    display: none;
+  }
+  .activities_wrap>.activities>.activities_block>.event>.event_info>.event_information {
+    float: none;
+    width: 100%;
+    padding-left: 0;
+  }
+  .activities_wrap>.activities>.activities_block>.event>.name {
+    font-size: 18px;
+  }
+  .activities_wrap>.activities>.activities_block>.event>.event_info>.event_information>table tr {
+    display: none;
+  }
+  .activities_wrap>.activities>.activities_block>.event>.event_info>.event_information>table tr:nth-child(1),
+  .activities_wrap>.activities>.activities_block>.event>.event_info>.event_information>table tr:nth-child(3){
+    display: table-row;
+  }
+  .activities_wrap>.activities>.activities_block>.event>a {
+    float: none;
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+  }
+  .activities_wrap>.activities>.activities_block>.event.blocked {
+    background: #fff;
+    position: relative;
+  }
+  .blocked_hide {
+    color: #fff;
+    background: #ff4c4c;
+    font: 14px "Neue-Regular", sans-serif;
+    display: block;
+    padding: 5px 8px;
+    border-bottom-left-radius: 5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .activities_wrap>.activities>.activities_block>.event.blocked>.name {
+    margin-top: 15px;
+  }
+}
+
+
+
+//////src
+
+.src-wrap ul>li {
+  line-height: 1;
+}
+
+@media only screen and (max-width: 700px) {
+  .src-wrap ul>li>a {
+    font-size: 20px;
+  }
+}
+
+
+@media  only screen and (max-width: 500px) {
+  .src-wrap ul>li>a {
+    font-size: 18px;
+  }
+}

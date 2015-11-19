@@ -122,3 +122,125 @@ body {
     }
   }
 }
+
+.hide_go {
+  display: none;
+}
+
+
+@media only screen and (max-width: 1110px) {
+  .event_wrap>.event_info {
+    padding-left: 20px;
+  }
+  .event_wrap>.event_info>h2 {
+    line-height: 1;
+  }
+  .event_wrap>.event_info>.program_list>li {
+    line-height: 1;
+  }
+  .event_wrap>.event_info>.more_info tr td:first-child {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .event_wrap>.event_info>.info tr td:first-child {
+    width: 30%;
+  }
+  .event_wrap>.event_info>h2 {
+    font-size: 27px;
+  }
+}
+
+@media only screen and (max-width: 903px) {
+
+  .event_wrap {
+    padding-bottom: 50px;
+  }
+
+  .event_wrap>.event_info>.more_info tr td {
+    font-size: 16px;
+  }
+
+  .event_wrap>.event_info>.program {
+    color: #ccc;
+    font-size: 18px;
+  }
+
+  .event_wrap>.event_info>.program_list>li {
+    font-size: 18px;
+  }
+
+  .event_wrap>.event_info>h2 {
+    font-size: 30px;
+  }
+  .event_wrap>.event_info>.info tr:last-child td:last-child {
+    width: 20%;
+  }
+
+  .event_wrap>.event_info>.more_info {
+    display: block;
+  }
+  .event_wrap>.event_info>.more {
+    cursor: default;
+  }
+  .event_wrap>.event_info>.info tr .tel, .event_wrap>.event_info>.info tr>.mail {
+    font-size: 18px;
+  }
+
+  .event_wrap>.event_info>.more_info tr td:first-child {
+    width: 60%;
+  }
+
+}
+
+@media  only screen and (max-width: 875px) {
+  .event_wrap>.event_info>.info tr:last-child td:last-child {
+    display: none;
+  }
+  .hide_go {
+    margin-top: 30px;
+    float: right;
+    display: block;
+    padding: 7px 30px 10px 30px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .event_wrap>.event_info>.more_info tr td:first-child,.event_wrap>.event_info>.more_info tr td:last-child {
+    width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .event_wrap>.event_img {
+    display: none;
+  }
+  .event_wrap>.event_info {
+    padding-left: 0;
+    width: 100%;
+    float: none;
+  }
+  .event_wrap>.event_info>.more {
+    font-size: 18px;
+    border-bottom: none;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .event_wrap>.event_info>.info tr td:first-child,.event_wrap>.event_info>.info tr td:last-child,.event_info>.info tr td:nth-child(2) {
+    width: 100%;
+    display: block;
+  }
+  .event_wrap>.event_info>.info tr>.mail {
+    width: 100%;
+  }
+  .event_wrap>.event_info>h2 {
+    font-size: 22px;
+  }
+  .event_wrap {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
