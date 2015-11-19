@@ -42,7 +42,7 @@ gulp.task('css',function(){
 gulp.task('html', function () {
     gulp.src('dev/*.html')
         .pipe(rigger())
-        .pipe(minifyHTML())
+        //.pipe(minifyHTML())
         .pipe(gulp.dest('build/'));
 });
 
@@ -50,7 +50,7 @@ gulp.task('html', function () {
 gulp.task('js', function () {
     gulp.src('dev/js/*.js')
         .pipe(rigger())
-        .pipe(uglify())
+        //.pipe(uglify())
         .pipe(gulp.dest('build/js/'));
 });
 
